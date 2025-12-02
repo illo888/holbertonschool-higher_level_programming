@@ -6,6 +6,3 @@ new_element = 9
 new_list = new_in_list(my_list, idx, new_element)
 print(new_list)
 print(my_list)
-print(new_in_list([1, 2, 3], -1, 99))
-print(new_in_list([1, 2, 3], 10, 99))
-print(new_in_list([1, 2, 3], 1, 99))
