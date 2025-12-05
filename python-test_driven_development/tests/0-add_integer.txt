@@ -1,4 +1,4 @@
-A simple doctest for 0-add_integer.py
+A simple doctest for 0-add_integer.txt
 
 Tests for add_integer function
 -------------------------------
@@ -39,7 +39,7 @@ TypeError: a must be an integer
 
 # Test for conversion of float to int
 >>> add_integer(4.5, 5.5)
-10
+9
 >>> add_integer(0.000000001, 0.000000001)
 0
 
