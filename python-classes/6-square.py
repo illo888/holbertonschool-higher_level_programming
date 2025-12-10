@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 Square class that defines a square with size and position properties,
@@ -21,7 +20,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Set the size with validation (reject bool)."""
+        """Set the size with validation (only int, reject bool, and >= 0)."""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
@@ -35,30 +34,35 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """Set the position with validation (tuple of 2 positive integers)."""
-        if (type(value) is not tuple or
-                len(value) != 2 or
-                type(value[0]) is not int or
-                type(value[1]) is not int or
-                value[0] < 0 or
-                value[1] < 0):
+        """
+        Set the position with validation:
+        must be a tuple of 2 positive integers (reject bool explicitly).
+        """
+        if type(value) is not tuple or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
+
+        x, y = value
+        if (type(x) is not int or type(y) is not int or x < 0 or y < 0):
+            raise TypeError("position must be a tuple of 2 positive integers")
+
+        self.__position = (x, y)
 
     def area(self):
         """Return the current square area."""
         return self.__size * self.__size
 
     def my_print(self):
-        """Print the square using the character # respecting position offsets."""
+        """Print the square using #, respecting horizontal/vertical offsets."""
         if self.__size == 0:
             print()
             return
 
-        # vertical offset (new lines), no spaces filled in those lines
+        # vertical offset: print empty lines, no spaces on those lines
         for _ in range(self.__position[1]):
             print()
 
-        # each line: horizontal spaces then hashes
+        # horizontal offset + hashes on each line
+        prefix = " " * self.__position[0]
+        line = "#" * self.__size
         for _ in range(self.__size):
-            print((" " * self.__position[0]) + ("#" * self.__size))
+            print(prefix + line)
