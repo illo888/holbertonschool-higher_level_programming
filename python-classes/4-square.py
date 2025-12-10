@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 Square class that defines a square with private size,
@@ -11,7 +10,8 @@ class Square:
 
     def __init__(self, size=0):
         """Initialize Square with optional size (default: 0)."""
-        self.size = size  # use the property to apply validation
+        # Use the property to apply validation logic centrally
+        self.size = size
 
     @property
     def size(self):
@@ -20,7 +20,8 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Set the size with validation (reject bool, allow only ints >= 0)."""
+        """Set the size with validation (only int, no bool, and >= 0)."""
+        # Reject bool explicitly (since bool is a subclass of int)
         if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
