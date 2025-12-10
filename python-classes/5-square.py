@@ -19,7 +19,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Set the size with validation."""
+        """Set the size with validation (reject bool, allow only int >= 0)."""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
@@ -37,4 +37,3 @@ class Square:
             return
         for _ in range(self.__size):
             print("#" * self.__size)
-
