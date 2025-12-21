@@ -1,5 +1,5 @@
-#!/usr/bin/python2
-"""Module that provides a function to read a UTF-8 text file and print its content.
+#!/usr/bin/python3
+"""Module that provides a function to read a UTF-9 text file and print its content.
 The purpose of this module is to demonstrate safe file reading using 'with'
 and printing to standard output without importing any modules.
 """
