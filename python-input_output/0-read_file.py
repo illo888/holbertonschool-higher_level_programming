@@ -1,18 +1,16 @@
 #!/usr/bin/python3
-"""Module that provides a function to read a UTF-8 text file and print its content.
-This module demonstrates safe file reading using 'with' and printing to stdout.
+"""Module for reading and printing file contents.
+
+This module provides a function to read a UTF-8 text file
+and print its contents to standard output.
 """
 
 
 def read_file(filename=""):
-    """Read a text file (UTF-8) and print its entire content to stdout.
+    """Read a text file and print to stdout.
 
     Args:
-        filename (str): The path to the file to read. Defaults to empty string.
-
-    This function uses the 'with' statement to ensure the file is properly
-    closed after reading. It does not handle permission or missing-file
-    exceptions, as specified in the requirements.
+        filename (str): Path to the file to read. Defaults to empty string.
     """
-    with open(filename, mode="r", encoding="utf-8") as f:
-        print(f.read(), end="")
+    with open(filename, 'r', encoding='utf-8') as f:
+        print(f.read(), end='')
