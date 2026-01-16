@@ -31,3 +31,27 @@ CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
 In this task, the goal was to write an SQL script that deletes the database `hbtn_0c_0` from the MySQL server.  
 The script must not fail if the database does not
 
+
+Task 3: List All Tables
+In this task, the goal was to write a script that lists all the tables inside the current database.
+The script must use only the SHOW TABLES; command, start with a comment, and all SQL keywords must be uppercase.
+The database name will be passed as an argument when calling the mysql command.
+File: 3-list_tables.sql
+Content:
+SQL-- Script that lists all tables in the current databaseSHOW TABLES;إظهار 
+
+Task 4: First Table
+In this task, the goal was to create a table named first_table in the currently selected database.
+The table must contain two columns:
+
+id (INT)
+name (VARCHAR(256))
+
+The script must not fail if the table already exists, so CREATE TABLE IF NOT EXISTS must be used.
+SQL keywords must be uppercase and the script must begin with a comment describing the task.
+You are not allowed to use SELECT or SHOW.
+File: 4-first_table.sql
+Content:
+SQL-- Script that creates the table `first_table` if it does not already exist-- The table has: id INT, name VARCHAR(256)CREATE TABLE IF NOT EXISTS first_table (    id INT,    name VARCHAR(256));
+
+---
