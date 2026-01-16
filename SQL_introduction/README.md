@@ -26,3 +26,8 @@ SHOW DATABASES;
 -- Script that creates the database hbtn_0c_0 if it does not exist
 CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
 
+### Task 2: Delete a Database
+
+In this task, the goal was to write an SQL script that deletes the database `hbtn_0c_0` from the MySQL server.  
+The script must not fail if the database does not
+
