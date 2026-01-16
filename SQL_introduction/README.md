@@ -55,3 +55,8 @@ Content:
 SQL-- Script that creates the table `first_table` if it does not already exist-- The table has: id INT, name VARCHAR(256)CREATE TABLE IF NOT EXISTS first_table (    id INT,    name VARCHAR(256));
 
 ---
+
+### Task 5: Full Description
+
+In this task, the goal was to write an SQL script that prints the full description of the table `first_table` from the database `hbtn_0c_0`.  
+The script must not use `DESCRIBE` or `EXPLAIN`, so instead we use the command:
