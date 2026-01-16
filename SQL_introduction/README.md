@@ -16,13 +16,13 @@ The script must start with a comment explaining its purpose, and all SQL keyword
 **Purpose:** Show all databases using the `SHOW DATABASES;` command.
 
 Example content:
-```sql
+# sql
 -- Script that lists all databases
 SHOW DATABASES;
 
 **File:** `1-create_database_if_missing.sql`  
 **Content:**
-```sql
+#sql
 -- Script that creates the database hbtn_0c_0 if it does not exist
 CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
 
